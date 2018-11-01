@@ -179,6 +179,9 @@ call s:h('DraculaFgBold', s:fg, s:none, [s:attrs.bold])
 call s:h('DraculaComment', s:comment)
 call s:h('DraculaCommentBold', s:comment, s:none, [s:attrs.bold])
 
+call s:h('DraculaCursorLineNr', s:yellow, s:bg)
+call s:h('DraculaLineNr', s:selection, s:bglight, [s:attrs.bold])
+
 call s:h('DraculaSelection', s:none, s:selection)
 
 call s:h('DraculaSubtle', s:subtle)
@@ -241,7 +244,7 @@ call s:h('CursorLine', s:none, s:subtle)
 
 hi! link ColorColumn  DraculaSelection
 hi! link CursorColumn DraculaSelection
-hi! link CursorLineNr DraculaYellow
+hi! link CursorLineNr DraculaCursorLineNr
 hi! link DiffAdd      DraculaGreen
 hi! link DiffAdded    DiffAdd
 hi! link DiffChange   DraculaDiffChange
@@ -253,7 +256,7 @@ hi! link ErrorMsg     DraculaRedInverse
 hi! link FoldColumn   DraculaSubtle
 hi! link Folded       DraculaBoundary
 hi! link IncSearch    DraculaOrangeInverse
-hi! link LineNr       DraculaComment
+hi! link LineNr       DraculaLineNr
 hi! link MoreMsg      DraculaFgBold
 hi! link NonText      DraculaSubtle
 hi! link Pmenu        DraculaBgDark
